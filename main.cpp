@@ -3,11 +3,13 @@
 
 using namespace std;
 
-void protoEjercicio1();
+void protoEjercicio1(int);
 
 void protoEjercicio2(int);
 
-void protoEjercicio3();
+void isPrime(int);
+
+void protoEjercicio3(int);
 
 int main(){
 
@@ -27,7 +29,8 @@ int main(){
 				cout << "Por favor ingrese un numero: ";
 				cin >> numero;
 				protoEjercicio2(numero);
-
+				isPrime(numero);
+				
 				break;
 			}
 			
