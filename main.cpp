@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -52,7 +53,13 @@ void protoEjercicio2 (int numero){
 			location++;
 		}
 	}//fin de for
-
+	for (int i = 0; i < location; ++i)
+	{
+		if(isPrime((divisores[i]+numero)/divisores[i])){
+			totalNumeros += (divisores[i] + numero/divisores[i]);
+		}
+	}
+	cout << "El total de la formula es: "; << "\n";
 }
 
 void isPrime(int numeroYaSumado){
