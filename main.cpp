@@ -43,6 +43,7 @@ int opcion = 0;
 
 			case 3:{
 
+
 				break;
 			}
 		}
@@ -67,11 +68,12 @@ void protoEjercicio1(string numeroIngresado){
 			numeroMayor = numeroIngresado[index];
 		}		
 	}
+	numeroBase = numeroMayor +1;
 	int posicionDeNumero = 0;
-	for (int i = 0; i < count; ++i)
-	{
-		
-	}
+	//for (int i = numeroBase -1 ; i >= 0 ; ++i)
+	//{
+					
+	//}
 
 }
 
@@ -124,7 +126,6 @@ void protoEjercicio3(string numeroDeUsario){
 	int resultado = 0;
 	int numeroNuevo = numeroDeUsario;
 	int sumaTotal= 0;
-	
-
+	int numberArray[numeroAString.size()+1];
 }
 
