@@ -1,11 +1,12 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <sstream>
 
 using namespace std;
 using std::string; 	
 
-void protoEjercicio1(int);
+void protoEjercicio1(string);
 
 void protoEjercicio2(int);
 
@@ -57,10 +58,19 @@ void protoEjercicio1(string numeroIngresado){
 	{
 		numero[i] = numero[i] - 48;
 	}
-	int numeroMayor + 1;
+
+	int numeroMayor = 0;
+	for (int index = 0; index < numeroIngresado.size(); ++index)
+	{
+		cout << numero[i] << "\n";
+		if(numeroMayor[index]){
+			numeroMayor = numeroIngresado[index];
+		}		
+	}
+	int posicionDeNumero = 0;
 	for (int i = 0; i < count; ++i)
 	{
-		/* code */
+		
 	}
 
 }
@@ -103,7 +113,18 @@ int esPrime(int numeroYaSumado){
 }
 
 
-void protoEjercicio3(numeroDeUsario){
+void protoEjercicio3(string numeroDeUsario){
+	int numeroIngresadoUsuario;
+
+	stringstream ss;
+	ss<<numeroIngresadoUsuario;
+	string numeroAString = ss.str();
+	cout<<numeroAString << endl;
+
+	int resultado = 0;
+	int numeroNuevo = numeroDeUsario;
+	int sumaTotal= 0;
+	
 
 }
 
