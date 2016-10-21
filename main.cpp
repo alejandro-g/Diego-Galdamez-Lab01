@@ -1,25 +1,30 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 
 using namespace std;
+using std::string; 	
 
 void protoEjercicio1(int);
 
 void protoEjercicio2(int);
 
-void isPrime(int);
+int esPrime(int);
 
 void protoEjercicio3(int);
 
 int main(){
 
+int opcion = 0;
 	do{
-		int opcion;
-		cout << "1. Ejercicio 1" << "\n" << "2. Ejercicio 2" << "\n" << "3.Ejercicio 3" << "\n";
+		cout << "1. Ejercicio 1" << "\n" << "2. Ejercicio 2" << "\n" << "3. Ejercicio 3" << "\n";
 		cout << "Ingrese una opcion: ";
+		cin >> opcion;
 		switch(opcion){
 			case 1:{
-
+				int numero;
+				cout << "Por favor ingrese un numero: ";
+				cin >> numero;
 				break;
 			}
 			
@@ -29,12 +34,12 @@ int main(){
 				cout << "Por favor ingrese un numero: ";
 				cin >> numero;
 				protoEjercicio2(numero);
-				isPrime(numero);
 				
 				break;
 			}
-			
+
 			case 3:{
+
 				break;
 			}
 		}
@@ -42,7 +47,13 @@ int main(){
 	return 0;
 }
 
-void protoEjercicio1()
+void protoEjercicio1(string numeroIngresado){
+	int numero[numeroIngresado.size()+1];
+	for (int i = 0; i < numeroIngresado.size(); ++i)
+	{
+		numero[i] = numero[i] - 48;
+	}
+}
 
 
 void protoEjercicio2 (int numero){
@@ -51,23 +62,23 @@ void protoEjercicio2 (int numero){
 	int location = 0;
 	for (int index = 1; index <= numero; ++index)
 	{
-		if(numero % i == 0){
-			divisores[location] = i;
+		if(numero % index == 0){
+			divisores[location] = index;
 			location++;
 		}
 	}//fin de for
-	for (int i = 0; i < location; ++i)
+	for (int index = 0; index < location; ++index)
 	{
-		if(isPrime((divisores[i]+numero)/divisores[i])){
-			totalNumeros += (divisores[i] + numero/divisores[i]);
+		if(esPrime((divisores[index]+numero)/divisores[index])){
+			totalNumeros += (divisores[index] + numero/divisores[index]);
 		}
 	}
-	cout << "El total de la formula es: "; << "\n";
+	cout << "El total de la formula es: " << totalNumeros << "\n";
 }
 
-void isPrime(int numeroYaSumado){
+int esPrime(int numeroYaSumado){
 	int listaDivisores = 0;
-	for (int index = 1 index < numeroYaSumado; ++index)
+	for (int index = 1 ; index < numeroYaSumado; ++index)
 	{
 		if(numeroYaSumado % index == 0){
 			listaDivisores++;
