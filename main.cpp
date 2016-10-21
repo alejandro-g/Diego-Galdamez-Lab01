@@ -22,18 +22,20 @@ int opcion = 0;
 		cin >> opcion;
 		switch(opcion){
 			case 1:{
-				int numero;
+
+				int numeroEjercicio1;
 				cout << "Por favor ingrese un numero: ";
 				cin >> numero;
+				protoEjercicio1(numeroEjercicio1);
 				break;
 			}
 			
 			case 2:{
 
-				int numero;
+				int numeroEjercicio2;
 				cout << "Por favor ingrese un numero: ";
 				cin >> numero;
-				protoEjercicio2(numero);
+				protoEjercicio2(numeroEjercicio2);
 				
 				break;
 			}
@@ -48,11 +50,19 @@ int opcion = 0;
 }
 
 void protoEjercicio1(string numeroIngresado){
+	int numeroBase;
+	int decimal = 0;
 	int numero[numeroIngresado.size()+1];
 	for (int i = 0; i < numeroIngresado.size(); ++i)
 	{
 		numero[i] = numero[i] - 48;
 	}
+	int numeroMayor + 1;
+	for (int i = 0; i < count; ++i)
+	{
+		/* code */
+	}
+
 }
 
 
@@ -90,5 +100,10 @@ int esPrime(int numeroYaSumado){
 			return 0;
 		}
 	}
+}
+
+
+void protoEjercicio3(numeroDeUsario){
+
 }
 
