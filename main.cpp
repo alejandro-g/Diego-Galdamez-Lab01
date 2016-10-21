@@ -21,6 +21,12 @@ int main(){
 			}
 			
 			case 2:{
+
+				int numero;
+				cout << "Por favor ingrese un numero: ";
+				cin >> numero;
+				protoEjercicio2(numero);
+
 				break;
 			}
 			
@@ -28,16 +34,18 @@ int main(){
 				break;
 			}
 		}
-	}
-
+	}while(opcion == 0);
+	return 0;
 }
+
+void protoEjercicio1()
 
 
 void protoEjercicio2 (int numero){
 	int divisores[15];
 	int totalNumeros = 0;
 	int location = 0;
-	for (int i = 1; i <= numero; ++i)
+	for (int index = 1; index <= numero; ++index)
 	{
 		if(numero % i == 0){
 			divisores[location] = i;
@@ -45,19 +53,21 @@ void protoEjercicio2 (int numero){
 		}
 	}//fin de for
 
-	for (int i = 0; i < location; ++i)
+}
+
+void isPrime(int numeroYaSumado){
+	int listaDivisores = 0;
+	for (int index = 1 index < numeroYaSumado; ++index)
 	{
-		cout << "Los divisores son : " << divisores[location] << "\n";
+		if(numeroYaSumado % index == 0){
+			listaDivisores++;
+		}
+
+		if(listaDivisores <= 2){
+			return 1;
+		}else{
+			return 0;
+		}
 	}
-
 }
 
-void isPrime(int numero){
-	int dividendos = 0;
-	for (int i = 0; i < count; ++i)
-		{
-			
-		}	
-
-
-}
