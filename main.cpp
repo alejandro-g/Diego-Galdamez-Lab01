@@ -42,7 +42,10 @@ int opcion = 0;
 			}
 
 			case 3:{
-
+				cout<<"Ingrese un numero: " << endl;
+				cin >> numero;
+				string cadenaNumero = to_string(numero);
+				protoEjercicio3(numero);
 
 				break;
 			}
@@ -116,16 +119,20 @@ int esPrime(int numeroYaSumado){
 
 
 void protoEjercicio3(string numeroDeUsario){
-	int numeroIngresadoUsuario;
+	int sumaDigitos = 0;
+	int numeroFinal;
+	int digit;
+	int numero;
+	numeroFinal = numero;
+	while(numero > 0){
+		digit = numero % 10;
+		numero = numero / 10;
+		sumaDigitos = sumaDigitos = digit;
+	}
 
-	stringstream ss;
-	ss<<numeroIngresadoUsuario;
-	string numeroAString = ss.str();
-	cout<<numeroAString << endl;
-
-	int resultado = 0;
-	int numeroNuevo = numeroDeUsario;
-	int sumaTotal= 0;
-	int numberArray[numeroAString.size()+1];
-}
+	if(numeroFinal % sumaDigitos == 0){
+		cout << "El numero si es divisible por su suma!" << endl;
+	}else{
+		cout << "El numero no es divisble por su suma!" < endl;
+	}
 
